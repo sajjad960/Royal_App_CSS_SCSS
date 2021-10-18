@@ -1,0 +1,40 @@
+.slide {
+    grid-row: 2 / 3;
+    grid-column: 2 / -1;
+    position: relative;
+    @media only screen and (max-width: $bp-tab-port) {
+        grid-column: 1 / -1;
+    }
+
+    &__img {
+        width: 100%;
+        display: block;
+        height: 40rem;
+    }
+    &-text {
+        font-size: 2.3rem;
+        font-weight: 600;
+        top: 25%;
+        left: 10%;
+        color: white;
+        position: absolute;
+    }
+    &-btn {
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        padding: .7rem 2.5rem;
+        border-radius: 3px;
+        color: $Grey-light-3;
+        font-weight: 500;
+        margin-top: 1.2rem;
+        background-color: $color-pink;
+        outline: none;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $color-pink-dark;
+        }
+    }
+    
+}

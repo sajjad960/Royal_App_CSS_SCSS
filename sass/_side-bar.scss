@@ -1,0 +1,181 @@
+.side-bar {
+    grid-column: 1 / 2;
+    grid-row: 1 / 7;
+    background-color: #fff;
+
+    @media only screen and (max-width: $bp-tab-port) {
+        display: none;
+    }
+
+    &__logo-area {
+        background-color: rgba(255, 255, 255, 0.884);
+        width: 100%;
+    }
+    &__logo {
+        filter: brightness(120%) contrast(120%);
+        width: 30rem;
+        padding: 2rem;
+    }
+
+    &__contact {
+        padding: 1rem;
+        background-color: rgba(255, 255, 255, 0.884);
+
+        &-heading {
+            font-size: 2rem;
+            padding: 1rem;
+        }
+        &-input {
+            padding: .5rem;
+            width: 100%;
+            font-size: 1.6rem;
+
+        }
+        &-label {
+            opacity: 0;
+            visibility: hidden;
+        }
+        &-textarea {
+            padding: .5rem;
+            width: 100%;
+        }
+        &-submit {
+            margin-top: .8rem;
+            font-size: 2rem;
+            padding: .7rem;
+            color: white;
+            background-color: $color-pink;
+            border: none;
+            cursor: pointer;
+
+            &:hover {
+                background-color: rgb(230, 30, 30);
+            }
+
+        }
+
+    }
+}
+.search {
+   display: block;
+    &__input {
+        width: 100%;
+        outline: none;
+        padding: .8rem;
+        border: none;
+        color: #000;
+        display: inline-block;
+        background-color: $Grey-light-2;
+        margin-right: -3rem;
+        font-size: 1.7rem;
+        transition: all .2s;
+        
+
+        &:focus {
+            background-color: #fff;
+        }
+        
+    }
+    
+    
+    &__input:focus + &__button {
+        transition: all .2s;
+    }
+    &__input:focus + &__button {
+        background-color: #fff;
+    }
+    
+    
+    &__button {
+        transition: background-color .2s;
+        background-color: $Grey-light-3;
+        border: none;
+        margin-right: .5rem;
+        font-size: 1.9rem;
+        color: rgb(145, 137, 137);
+        cursor: pointer;
+        outline: none;
+
+        
+    }
+}
+.category {
+
+    &__group {
+        color: rgba(255, 255, 255, 0.726);
+        background-color: $color-pink-dark;
+        font-size: 1.9rem;
+        padding: .7rem;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    &__only {
+        font-size: 1.9rem;
+        border-bottom: 2px solid rgb(43, 42, 42);
+        color: white;
+        text-decoration: none;
+        font-weight: 300;
+
+        &-text {
+            background-color: $Grey-dark-1;
+            padding: .9rem;
+            border-bottom: 2px solid rgb(43, 42, 42);
+
+
+            &:hover {
+                background-color: rgb(36, 35, 35);
+            }
+        }
+    }
+    &__item {
+        padding: .7rem;
+        background-color: $Grey-dark-1;
+        border-bottom: 2px solid rgb(43, 42, 42);
+        display: flex;
+        justify-content: space-between;
+
+
+        &:hover {
+            background-color: rgb(36, 35, 35);
+        }
+        a:link,
+        a:visited {
+        color: white;
+        font-size: 1.9rem;
+        text-decoration: none;
+        font-weight: 300;
+        
+        }
+        
+        &-sub {
+            background-color: rgb(65, 64, 64);
+            font-size: 1.8rem;
+            padding: .8rem .8rem .8rem 2rem;
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.89);
+            border-bottom: 2px solid rgb(58, 57, 57);
+            
+            &--link:link,
+            &--link:visited,
+            &--link:active
+             {
+                text-decoration: none;
+                
+            }
+            &:hover {
+                background-color: rgb(48, 47, 47);
+            }
+        }
+
+    }
+}
+.accordion__head::after {
+        content: url(../arrow.svg);
+        padding: .5rem;
+        width: 25px;
+        transition: transform 300ms ease-in-out;   
+}
+
+.opened .accordion__head::after {
+    transform: rotate(180deg);
+  }

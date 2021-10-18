@@ -1,0 +1,38 @@
+.top-menu {
+    background-color: transparent;
+    grid-column: 2 / -1;
+    grid-row: 1 / 2;
+
+    @media only screen and (max-width: $bp-tab-port) {
+        grid-column: 1 / -1;
+    }
+    &-header {
+        font-size: 3rem;
+        display: inline-block;
+        
+    }
+    &__navbar {
+        list-style: none;
+        float: right;
+        margin-top: 1rem;
+        &-item {
+            display: inline-block;
+            margin-right: 1rem;
+            
+            
+        }
+        &-link:link,
+        &-link:visited {
+            text-decoration: none;
+            font-size: 1.7rem;
+            color: #000;
+            font-weight: 400;
+            transition: all .2s;
+
+            &:hover {
+                color: $color-pink;
+            }
+        }
+
+    }
+}

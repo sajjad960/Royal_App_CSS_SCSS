@@ -1,0 +1,81 @@
+.product {
+    background-color: $Grey-light-3;
+    grid-column: 2 / -1;
+    grid-row: 4 / 5;
+    
+    @media only screen and (max-width: $bp-tab-port) {
+        grid-column: 1 / -1;
+    }
+
+    &__card {
+        display: grid;
+        padding: 4rem;
+        grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+        grid-gap: 2rem;
+        
+
+        &-content {
+            background-color: #fff;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.247);
+            transition: all .2s;
+
+            
+
+            &:hover {
+                transform: translateY(-1px) scale(1.02);
+                box-shadow: 0 .3rem 2rem rgba(0, 0, 0, 0.24);
+                border-bottom: 2px solid rgba(0, 0, 0, 0.247);
+            }
+        }
+        &-tag {
+            font-size: 2rem;
+            text-transform: uppercase;
+            display: inline-block;
+            padding: .5rem 1rem;
+            color: #fff;
+            background-color: $color-pink;
+            z-index: 9999;
+        }
+        &-img {
+            width: 80%;
+            margin-left: 3rem;
+            
+        }
+        &-text {
+            font-size: 2rem;
+            font-weight: 700;
+            color: inherit;
+            padding: .5rem;
+
+        }
+        &-price {
+            color: $color-pink;
+            font-size: 2rem;
+            font-style: normal;
+            margin-left: 2rem;
+            margin-bottom: .5rem;
+            font-weight: 600;
+            display: inline-block;
+            font-family: 'Open Sans', sans-serif !important;
+
+
+        }
+        &-icon {
+            text-decoration: none;
+            color: $Grey-light-3;
+            text-align: center;
+            margin-top: .5rem;
+            font-size: 2.5rem;
+            background-color: $color-pink;
+            float: right;
+            padding: 1rem;
+            margin-right: .2rem;
+            transition: all .2s;
+
+            &:hover {
+                color: $color-pink;
+                background-color: white;
+            }
+        }
+    }
+}
